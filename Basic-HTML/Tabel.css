@@ -28,4 +28,5 @@
 
 .T1{
     border:2px black solid;
+    -webkit-margin-collapse: collapse;
 }
