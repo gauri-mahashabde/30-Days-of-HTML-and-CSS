@@ -1,3 +1,27 @@
-*{
-    background-color: aqua;
+* {
+  background-color: rgb(192, 239, 239);
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+#tabel {
+  border: 2px black solid;
+  width: 80%;
+  height: 50%;
+  margin: auto;
+}
+
+#title {
+  padding-left: 50%;
+  padding-right: 50%;
+  text-align: center;
+  justify-content: center;
+}
+
+#main {
+  border: 2px black solid;
+  width: 80%;
+  height: 50%;
+  margin: auto;
+  padding-bottom: 10px;
 }
