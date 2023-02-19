@@ -9,4 +9,7 @@
 
      p{
       padding-top: 20px;
+      text-decoration: double;
+      text-overflow: ellipsis;
+      border: 1px;
      }
