@@ -14,3 +14,9 @@
       box-sizing: border-box;
       border: 2px solid black;
      }
+
+     button{
+      width: 20%;
+      margin: auto;
+      padding-right: 10px;
+     }
