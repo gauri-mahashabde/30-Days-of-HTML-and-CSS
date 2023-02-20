@@ -1,0 +1,98 @@
+body {
+    background-color: rgb(192, 215, 215);
+}
+
+body {
+
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    border-style: solid;
+    height: 200%;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    background-color: aqua;
+
+}
+
+h2 {
+    background-color: darkcyan;
+    color: white;
+    padding: 10pz 20px;
+    text-align: center;
+}
+
+#fname {
+    margin-left: 2%;
+    background-color: aqua;
+}
+
+#lname {
+    margin-left: 10%;
+    background-color: aqua;
+}
+
+#email {
+    margin-left: 2%;
+    background-color: aqua;
+}
+
+#phone {
+    margin-left: 10%;
+    background-color: aqua;
+}
+
+
+#country {
+    margin-left: 2%;
+    width: 90%;
+    background-color: aqua;
+}
+
+#city {
+    margin-left: 2%;
+    width: 90%;
+    background-color: aqua;
+}
+
+#add {
+    margin-left: 2%;
+    width: 90%;
+    height: 50%;
+    background-color: aqua;
+}
+
+#position {
+    margin-left: 2%;
+    width: 90%;
+    background-color: aqua;
+}
+
+#info {
+    margin-left: 2%;
+    width: 90%;
+    height: 50%;
+    background-color: aqua;
+}
+
+#Cv {
+    margin-left: 2%;
+    width: 90%;
+    background-color: aqua;
+}
+
+#reset {
+    margin-left: 2%;
+    margin-bottom: 5%;
+    background-color: aqua;
+}
+
+#submit {
+    margin-left: 10%;
+    margin-bottom: 5%;
+    background-color: aqua;
+}

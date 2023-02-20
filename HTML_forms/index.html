@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="main">
+        <h2>Job Application Form</h2>
+        <form>
+          <input id="fname" type="text" placeholder="First Name" />
+          <input id="lname" type="text" placeholder="Last Name" /> <br /><br />
+          <input id="email" type="email" placeholder="Email" />
+          <input id="phone" type="phone" placeholder="Phone" /> <br /><br />
+          <input class="gender" type="radio" name="Gender" />Female
+          <input class="gender" type="radio" name="Gender" />Male
+          <select id="country" type="text" placeholder="Select country">
+            <option value="Australia">Australia</option>
+            <option value="India">India</option>
+            <option value="Russia">Russia</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Iran">Iran</option>
+            <option value="Iraq">Iraq</option></select
+          ><br /><br />
+          <input id="city" type="text" placeholder="city" /> <br /><br />
+          <input id="add" type="Address" placeholder="Address" /> <br /><br />
+          <select
+            id="position"
+            type="text"
+            placeholder="choose desired Position"
+          >
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="SDE">SDE</option>
+            <option value="Frontend Developer">Frontend Developer</option>
+            <option value="Backend Developer">Backend Developer</option>
+            <option value="Full Stack developer">
+              FullStack Developer
+            </option></select><br><br>
+            Select courses<br>
+            <input type="checkbox" name="course1" value="HTML">HTML<br>
+            <input type="checkbox" name="course2" value="CSS">CSS<br>
+            <input type="checkbox" name="course3" value="Javascript">Javascript<br>
+            <input type="checkbox" name="course4" value="React Js">React Js<br>
+            <input type="checkbox" name="course5" value="Node Js">Node Js<br>
+            <input type="checkbox" name="course6" value="MongoDB">MongiDB<br>
+            <input type="checkbox" name="course7" value="Mysql">Mysql<br>
+            <input type="checkbox" name="course8" value="Java">Java<br>
+            <input type="checkbox" name="course6" value="PHP">PHP<br>
+          <br /><br />
+          <input id="info" type="text" placeholder="Additional Info" />
+          <br /><br />
+          <input id="Cv" type="file" placeholder="Add your Cv" /> <br /><br />
+
+          <button id="reset" type="reset">reset</button>
+          <button id="submit" type="submit">submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
