@@ -5,15 +5,19 @@ body {
 body {
   justify-content: center;
   align-items: center;
+  height: auto;
 }
+
 
 .main {
   border-style: solid;
-  height: 200%;
+  height: 150%;
   width: 60%;
   margin: auto;
   margin-top: 50px;
   background-color: aqua;
+ 
+  
 }
 
 h2 {
@@ -26,37 +30,47 @@ h2 {
 #fname {
   margin-left: 2%;
   background-color: rgb(244, 205, 229);
+  width: 40%;
 }
 
 #lname {
   margin-left: 10%;
   background-color: rgb(244, 205, 229);
-};
-
+  width: 40%;
+}
 
 #email {
   margin-left: 2%;
   background-color: rgb(244, 205, 229);
-};
-
+  width: 40%;
+}
 
 #phone {
   margin-left: 10%;
   background-color: rgb(244, 205, 229);
+  width: 40%;
 }
 
-#gender{
-    margin-left: 3%;
-   padding-bottom: 3px;
-    background-color: rgb(244, 205, 229);
+#gender {
+  margin-left: 4%;
+  padding-bottom: 3px;
+  background-color: rgb(244, 205, 229);
+  border: 2px solid black;
+}
 
+.gender{
+  margin-left: 3%;
+  padding-bottom: 3px;
+  background-color: rgb(244, 205, 229);
+  margin-bottom: 2px;
 }
 
 #country {
   margin-left: 2%;
   width: 90%;
   background-color: rgb(244, 205, 229);
-  border: 1px solid  black ;
+  border: 1px solid black;
+  margin-top: 2px;
 }
 
 #city {
@@ -89,7 +103,8 @@ h2 {
   margin-left: 2%;
   width: 90%;
   height: 50%;
-  background-color: rgb(244, 205, 229);;
+  background-color: rgb(244, 205, 229);
+  border: 2px solid black;
 }
 
 #Cv {
@@ -102,10 +117,38 @@ h2 {
   margin-left: 2%;
   margin-bottom: 5%;
   background-color: rgb(244, 205, 229);
+
+  font-size: 14px;
+  border-radius: 6px;
+  line-height: 1.5;
+  padding: 5px 10px;
+  transition: box-shadow 100ms ease-in, border 100ms ease-in,
+  background-color 100ms ease-in;
+  border: 2px solid #459cb9;
+  color: rgb(14, 14, 16);
+  background: #dee1e2;
+  display: inline;
+  height: 36px;
+}
+
+:focus {
+  border-color: #9147ff;
+  background: #fff;
 }
 
 #submit {
-  margin-left: 10%;
-  margin-bottom: 5%;
+  margin-bottom: 5px;
+  margin-left: 20%;
   background-color: rgb(244, 205, 229);
+  font-size: 14px;
+  border-radius: 6px;
+  line-height:1.5 ;
+  padding: 5px 10px;
+  transition: box-shadow 100ms ease-in, border 100ms ease-in,
+  background-color 100ms ease-in;
+  border: 2px solid #459cb9;
+  color: rgb(14, 14, 16);
+  background: #dee1e2;
+  display: inline;
+  height: 36px;
 }
