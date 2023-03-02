@@ -36,26 +36,31 @@ h2 {
   margin-left: 10%;
   background-color: rgb(244, 205, 229);
   width: 40%;
-  height: 40%;
+  height: 30px;
 }
 
 #email {
   margin-left: 2%;
   background-color: rgb(244, 205, 229);
   width: 40%;
+  height: 30px;
 }
 
 #phone {
   margin-left: 10%;
   background-color: rgb(244, 205, 229);
   width: 40%;
+  height: 30px;
 }
 
 #gender1 {
-  margin-left: 4%;
+  margin-left: 2%;
   padding-bottom: 3px;
   background-color: rgb(244, 205, 229);
   border: 2px solid black;
+  margin-right: 3.5%;
+  margin-bottom: 2%;
+  width: 90%;
 }
 
 .gender {
@@ -64,20 +69,23 @@ h2 {
   background-color: rgb(244, 205, 229);
   margin-bottom: 2px;
   border: 2px solid black;
+  margin-right: 3px;
 }
-
+   
 #country {
   margin-left: 2%;
   width: 90%;
   background-color: rgb(244, 205, 229);
   border: 1px solid black;
   margin-top: 2px;
+  height: 30px;
 }
 
 #city {
   margin-left: 2%;
   width: 90%;
   background-color: rgb(244, 205, 229);
+  height: 30px;
 }
 
 #add {
@@ -85,12 +93,14 @@ h2 {
   width: 90%;
   height: 50%;
   background-color: rgb(244, 205, 229);
+  height: 30px;
 }
 
 #position {
   margin-left: 2%;
   width: 90%;
   background-color: rgb(244, 205, 229);
+  height: 30px;
 }
 
 #info {
@@ -98,6 +108,7 @@ h2 {
   width: 90%;
   height: 50%;
   background-color: rgb(244, 205, 229);
+  height: 30px;
 }
 
 #options {
@@ -106,12 +117,14 @@ h2 {
   height: 50%;
   background-color: rgb(244, 205, 229);
   border: 2px solid black;
+  
 }
 
 #Cv {
   margin-left: 2%;
   width: 90%;
   background-color: rgb(244, 205, 229);
+ 
 }
 
 #reset {
