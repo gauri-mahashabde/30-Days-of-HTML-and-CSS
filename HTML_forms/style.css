@@ -60,7 +60,7 @@ h2 {
   border: 2px solid black;
   margin-right: 3.5%;
   margin-bottom: 2%;
-  width: 90%;
+  width: 690px;
 }
 
 .gender {
@@ -71,10 +71,10 @@ h2 {
   border: 2px solid black;
   margin-right: 3px;
 }
-   
+
 #country {
   margin-left: 2%;
-  width: 90%;
+  width: 690px;
   background-color: rgb(244, 205, 229);
   border: 1px solid black;
   margin-top: 2px;
@@ -83,14 +83,14 @@ h2 {
 
 #city {
   margin-left: 2%;
-  width: 90%;
+  width: 690px;
   background-color: rgb(244, 205, 229);
   height: 30px;
 }
 
 #add {
   margin-left: 2%;
-  width: 90%;
+  width: 690px;
   height: 50%;
   background-color: rgb(244, 205, 229);
   height: 30px;
@@ -98,14 +98,14 @@ h2 {
 
 #position {
   margin-left: 2%;
-  width: 90%;
+  width: 690px;
   background-color: rgb(244, 205, 229);
   height: 30px;
 }
 
 #info {
   margin-left: 2%;
-  width: 90%;
+  width: 690px;
   height: 50%;
   background-color: rgb(244, 205, 229);
   height: 30px;
@@ -113,18 +113,17 @@ h2 {
 
 #options {
   margin-left: 2%;
-  width: 90%;
+  width: 690px;
   height: 50%;
   background-color: rgb(244, 205, 229);
   border: 2px solid black;
-  
 }
 
 #Cv {
   margin-left: 2%;
-  width: 90%;
+  width: 690px;
   background-color: rgb(244, 205, 229);
- 
+  border: 2px solid black;
 }
 
 #reset {
@@ -145,11 +144,14 @@ h2 {
   height: 36px;
 }
 
-:focus {
+:focus :hover {
   border-color: #9147ff;
   background: #fff;
 }
 
+:hover {
+  color: #000;
+}
 #submit {
   margin-bottom: 5px;
   margin-left: 20%;
