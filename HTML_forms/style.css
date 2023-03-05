@@ -1,6 +1,6 @@
 body {
   background-color: rgb(192, 215, 215);
-  background-image: url("https://i.stack.imgur.com/jGlzr.png");
+  background-image: url("https://i.pinimg.com/originals/fe/d3/d6/fed3d6467231c334788f43202c0fb9c6.jpg");
 }
 
 body {
@@ -16,6 +16,7 @@ body {
   margin: auto;
   margin-top: 50px;
   background-color: rgb(235, 167, 167);
+  border-radius: 1%;
 }
 
 h2 {
@@ -30,6 +31,7 @@ h2 {
   background-color: rgb(244, 205, 229);
   width: 40%;
   height: 30px;
+  
 }
 
 #lname {
@@ -37,6 +39,7 @@ h2 {
   background-color: rgb(244, 205, 229);
   width: 40%;
   height: 30px;
+ 
 }
 
 #email {
