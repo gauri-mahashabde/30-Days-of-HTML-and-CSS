@@ -1,0 +1,11 @@
+body {
+  background-color: rgb(238, 216, 187);
+}
+
+.container {
+  border: 2px solid black;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  margin: -50px 0 0 -50px;
+}
