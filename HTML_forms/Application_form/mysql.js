@@ -122,7 +122,7 @@ var server = http.createServer(function (req, res) {
     Java,
     PHP,
     addinfo,
-    file,
+    file, 
   ];
   console.log(query);
   console.log(values);
