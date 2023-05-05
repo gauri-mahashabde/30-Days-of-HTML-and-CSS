@@ -79,6 +79,10 @@ var server = http.createServer(function (req, res) {
   }
   var addinfo = MyURL.searchParams.get("info");
   var file = MyURL.searchParams.get("file");
+  //var name = MyURL.searchParams.get("name");
+  var uname = MyURL.searchParams.get("Username");
+  //var mail = MyURL.searchParams.get("email");
+  var mail = MyURL.searchParams.get("password");
 
   console.log("FName = " + fname);
   //console.log("Age = " + age);
@@ -101,7 +105,8 @@ var server = http.createServer(function (req, res) {
   });
 
   var query =
-    "INSERT into applicants(fname, lname,email,phone,gender,country,city, address,designation,HTML,CSS,JS,ReactJS,NodeJS,MongoDb,Mysql,Java,PHP,addinfo , addfile) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    "INSERT into applicants(fname, lname,email,phone,gender,country,city, address,designation,HTML,CSS,JS,ReactJS,NodeJS,MongoDb,Mysql,Java,PHP,addinfo , addfile) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
+    "INSERT into admin(UserID,Password)Values(?,?)";
   var values = [
     fname,
     lname,
@@ -122,7 +127,9 @@ var server = http.createServer(function (req, res) {
     Java,
     PHP,
     addinfo,
-    file, 
+    file,
+    uname,
+    mail,
   ];
   console.log(query);
   console.log(values);
