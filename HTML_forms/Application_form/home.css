@@ -2,8 +2,8 @@ body {
   background-image: url("https://images.unsplash.com/photo-1464618663641-bbdd760ae84a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2Vic2l0ZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8");
 }
 
-.container {
-}
+/*.container {
+}*/
 
 .container > div {
   margin: 10px;
@@ -20,11 +20,13 @@ body {
 h4 {
   display: flex;
   justify-content: center;
-  background-color: blueviolet;
+  /*background-color: blueviolet;*/
+  margin-bottom: 10px;
 }
 .main {
   border: 2px solid black;
   height: 450px;
+  border-radius: 7px;
 }
 
 .main1 {
@@ -34,15 +36,22 @@ h4 {
   justify-content: space-around;
   align-items: center;
   background-color: aquamarine;
+  border-radius: 5px;
+  margin-bottom: 17px;
 }
 
 .main2 {
-  height: 232px;
+  height: 213px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border: 2px solid black;
+  /*border: 2px solid black;*/
   background-color: azure;
+  border-radius: 2px;
+  background-color: rgb(197, 197, 91);
+}
+.new{
+    margin-left: 10px;
 }
 
 .heading {
@@ -92,4 +101,33 @@ h4 {
   box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
     -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
     0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 100;
+  font-family: "Niconne", cursive;
+}
+
+.apply{
+    margin-top: 12px;
+    border: 0;
+    border-radius: 12px;
+    color: #964618;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+      sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
 }
