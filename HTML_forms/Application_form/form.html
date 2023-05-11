@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="main">
+        <h2>Job Application Form</h2>
+        <form action="http://localhost:8080" method="get">
+          <input id="fname" name="fname" type="text" placeholder="First Name" />
+          <input id="lname" name="lname" type="text" placeholder="Last Name" />
+          <br /><br />
+          <input id="email" name="email" type="email" placeholder="Email" />
+          <input id="phone" name="phone" type="phone" placeholder="Phone" />
+          <br /><br />
+          <div id="gender1">
+            <input class="gender" type="radio" name="Gender" value="F" />Female
+            <input class="gender" type="radio" name="Gender" value="M" />Male
+          </div>
+          <select
+            id="country"
+            type="text"
+            name="country"
+            placeholder="Select country"
+          >
+            <option value="Australia">Australia</option>
+            <option value="India">India</option>
+            <option value="Russia">Russia</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Iran">Iran</option>
+            <option value="Iraq">Iraq</option></select
+          ><br /><br />
+          <input id="city" name="city" type="text" placeholder="city" />
+          <br /><br />
+          <input id="add" name="add" type="Address" placeholder="Address" />
+          <br /><br />
+          <select
+            id="position"
+            name="position"
+            type="text"
+            placeholder="choose desired Position"
+          >
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="SDE">SDE</option>
+            <option value="Frontend Developer">Frontend Developer</option>
+            <option value="Backend Developer">Backend Developer</option>
+            <option value="Full Stack developer">
+              FullStack Developer
+            </option></select
+          ><br /><br />
+          <div id="options">
+            Select courses<br />
+            <input type="checkbox" value="HTML" name="HTML" />HTML<br />
+            <input type="checkbox" value="CSS" name="CSS" />CSS<br />
+            <input
+              type="checkbox"
+              value="Javascript"
+              name="JS"
+            />Javascript<br />
+            <input type="checkbox" value="React Js" name="ReactJS" />React Js<br />
+            <input type="checkbox" value="Node Js" name="NodeJS" />Node Js<br />
+            <input
+              type="checkbox"
+              value="MongoDB"
+              name="MongoDb"
+            />MongiDB<br />
+            <input type="checkbox" value="Mysql" name="Mysql" />Mysql<br />
+            <input type="checkbox" value="Java" name="Java" />Java<br />
+            <input type="checkbox" value="PHP" name="PHP" />PHP<br />
+          </div>
+          <br /><br />
+          <input
+            id="info"
+            type="text"
+            name="info"
+            placeholder="Additional Info"
+          />
+          <br /><br />
+          <input
+            id="Cv"
+            name="file"
+            type="file"
+            placeholder="Add your Cv"
+          /><br /><br />
+
+          <button id="reset" type="reset">reset</button>
+          <button id="submit" type="submit">submit</button>
+        </form>
+      </div>
+    </div>
+    <script src="form.js"></script>
+  </body>
+</html>
