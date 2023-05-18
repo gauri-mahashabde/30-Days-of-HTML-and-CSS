@@ -49,7 +49,15 @@ var server = http.createServer(function (req, res) {
             res.end();    
         });
     }
-
+    else if (req.url == '/change'){
+        fs.readFile('', function (err, data) {
+            if (err) {
+                return console.error(err);
+            }
+            res.write(data.toString());
+            res.end();    
+        });
+    }
     
     else{
         console.log("    " + req.url);
