@@ -66,7 +66,8 @@ var server = http.createServer(function (req, res) {
         if (error) {
           console.log("error in query");
         } else {
-
+            // record is created
+              // so opening login page
           console.log("Login page");
           fs.readFile("login.html", function (err, data) {
             if (err) {
@@ -104,10 +105,23 @@ else if (req.url == "/login") {
       res.write(data.toString());
       res.end();
     });
-  } else if (req.url == "/log") {
+    var query = "SELECT * FROM applicants WHERE email=? AND password =?"
+  // "INSERT into admin(UserID,Password)Values(?,?)";
+  var values = [ email, password];
+  console.log(query);
+  } 
+  else if (req.url == "/log") {
     const MyURL = new URL(req.url, "http://localhost:8080");
-    var email = MyURL.searchParams.get("mail");
-    var password = MyURL.searchParams.get("password");
+    let body = '';
+      req.on('data' , chunk => {
+        body += chunk.toString();
+      });
+      req.on('end',() => {
+        var post = qs.parse(body);})
+
+        console.log(post);
+      
+
     var con = mysql.createConnection({
       host: "localhost",
       user: "root",
@@ -119,9 +133,9 @@ else if (req.url == "/login") {
     con.connect(function (err) {
       if (err) {
         console.log("err in connectivity");
-        return;
-      }
-      console.log("connection successful");
+     
+       console.log("connection successful");
+       return;}
     });
   
     var query = "SELECT * FROM applicants WHERE email=? AND password =?";
@@ -129,24 +143,34 @@ else if (req.url == "/login") {
     var values = [email, password];
     console.log(query);
     console.log(values);
-  
-    con.query(query, values, function (error, result) {
-      if (error) {
-        console.log("error in query");
-      } else {
-        console.log("query executed");
+    con.query(query , value , function(error , result){
+      if(error){
+        console.log("error in query")
+      }
+      else {
+        console.log("query excecute");
         console.log(result);
         console.log(result.length);
-        if (result.length == 1) {
-          res.write("Username password is valid. Login success");
-          res.end();
-        } else {
-          res.write("Username password is invalid. Try again");
-          res.end();
+        if(result.length == 1){
+          fs.readFile("login.html" , function(err ,data){
+            if(err){
+              return console.log(err);
+            } 
+            res.write(data.toString());
+            res.end();
+            else{
+              res.write("username password is invalid , Try again");
+              res.end();
+            } 
+          }
         }
-      }
-    });
-  } else if (req.url == "/login.css") {
+      
+          
+  
+      
+     
+    
+    else if (req.url == "/login.css") {
 
     fs.readFile("login.css", function (err, data) {
       if (err) {
