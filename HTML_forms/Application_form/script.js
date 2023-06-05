@@ -5,7 +5,7 @@ var fs = require("fs");
 var qs = require("querystring");
 var server = http.createServer(function (req, res) {
   console.log("Request from client received...");
-
+//Home page
   if (req.url == "/") {
     console.log("Home page");
     fs.readFile("home.html", function (err, data) {
@@ -16,7 +16,10 @@ var server = http.createServer(function (req, res) {
       res.write(data.toString());
       res.end();
     });
-  } else if (req.url == "/register") {
+  }
+  //Registration part
+  //Register main page
+   else if (req.url == "/register") {
     console.log("Register page");
     fs.readFile("register.html", function (err, data) {
       if (err) {
@@ -26,6 +29,7 @@ var server = http.createServer(function (req, res) {
       res.end();
     });
   } 
+  //path to create a data , query part
   else if (req.url == "/create") {
       const MyURL = new URL(req.url, "http://localhost:8080");
       let body = '';
@@ -75,16 +79,9 @@ var server = http.createServer(function (req, res) {
             }
             res.write(data.toString());
             res.end();
-          });
-      
-          //res.write("Record created");
-          //res.write("<a href='/login'>Click to Login</a>");
-          //res.end();
-          //console.log(result);
-        }
-      });
-      });      
+          }); } }); });      
   }
+  //css page for register
  else if (req.url == "/register.css") {
   fs.readFile("register.css", function (err, data) {
     if (err) {
@@ -93,9 +90,9 @@ var server = http.createServer(function (req, res) {
     res.write(data.toString());
     res.end();
   });
-  
-    }    
+}    
 
+  //login page
 else if (req.url == "/login") {
     console.log("Login page");
     fs.readFile("login.html", function (err, data) {
@@ -105,74 +102,83 @@ else if (req.url == "/login") {
       res.write(data.toString());
       res.end();
     });
-    var query = "SELECT * FROM applicants WHERE email=? AND password =?"
-  // "INSERT into admin(UserID,Password)Values(?,?)";
-  var values = [ email, password];
-  console.log(query);
-  } 
-  else if (req.url == "/log") {
+  } // end of login
+  //path to login and query to verify the credentials 
+  else if (req.url == "/validate") {
+  
     const MyURL = new URL(req.url, "http://localhost:8080");
     let body = '';
       req.on('data' , chunk => {
         body += chunk.toString();
       });
       req.on('end',() => {
-        var post = qs.parse(body);})
-
+        var post = qs.parse(body);
         console.log(post);
-      
 
-    var con = mysql.createConnection({
-      host: "localhost",
-      user: "root",
-      password: "Gauri@1029",
-      database: "application_form",
-      port: 3306,
-    });
-  
-    con.connect(function (err) {
-      if (err) {
-        console.log("err in connectivity");
-     
-       console.log("connection successful");
-       return;}
-    });
-  
-    var query = "SELECT * FROM applicants WHERE email=? AND password =?";
-    // "INSERT into admin(UserID,Password)Values(?,?)";
-    var values = [email, password];
-    console.log(query);
-    console.log(values);
-    con.query(query , value , function(error , result){
-      if(error){
-        console.log("error in query")
-      }
-      else {
-        console.log("query excecute");
-        console.log(result);
-        console.log(result.length);
-        if(result.length == 1){
-          fs.readFile("login.html" , function(err ,data){
-            if(err){
-              return console.log(err);
-            } 
-            res.write(data.toString());
-            res.end();
-            else{
-              res.write("username password is invalid , Try again");
-              res.end();
-            } 
-          }
-        }
-      
-          
-  
-      
-     
+        // "INSERT into admin(UserID,Password)Values(?,?)";
+        var email =post['email'];
+        var password = post['password'];
+
+        var query = "SELECT * FROM applicants WHERE email=? AND password =?"
+        var values = [ email, password];
+        console.log(query);
     
+        var con = mysql.createConnection({
+          host: "localhost",
+          user: "root",
+          password: "Gauri@1029",
+          database: "application_form",
+          port: 3306,
+        });
+
+        con.connect(function (err) {
+          if (err) {
+            console.log("err in connectivity");
+           return;
+          }
+          else{
+
+            con.query(query , values , function(error , result){
+              if(error){
+                console.log("error in query")
+              }
+              else {
+                console.log("query excecute");
+                console.log(result);
+                console.log(result.length);
+                if(result.length == 1){
+                  fs.readFile("main.html" , function(err ,data){
+                    if(err){
+                      return console.log(err);
+                    } 
+                    res.write(data.toString());
+                    res.end();
+                  });
+                }
+                else{
+                      res.write("username password is invalid , Try again");
+                      res.end();
+                } 
+              }
+            });
+          }
+        });
+    
+      });
+    }
     else if (req.url == "/login.css") {
 
     fs.readFile("login.css", function (err, data) {
+      if (err) {
+        return console.error(err);
+      }
+      res.write(data.toString());
+      res.end();
+    });
+  }
+  else if (req.url == "/main.css") {
+
+    fs.readFile("main.css", function (err, data) {
       if (err) {
         return console.error(err);
       }
@@ -190,25 +196,94 @@ else if (req.url == "/login") {
       res.write(data.toString());
       res.end();
     });
-  } else if (req.url == "/change") {
-    fs.readFile("", function (err, data) {
-      if (err) {
-        return console.error(err);
+  } 
+    
+    
+    //the delete section
+    //opening the delete page
+    else if (req.url == "/delete") {
+      console.log("Delete page");
+      fs.readFile("delete.html", function (err, data) {
+        if (err) {
+          return console.error(err);
+        }
+        res.write(data.toString());
+        res.end();
+      });
+    } // end of login
+    //path to login and query to verify the credentials 
+    else if (req.url == "/deleteit") {
+    
+      const MyURL = new URL(req.url, "http://localhost:8080");
+      let body = '';
+        req.on('data' , chunk => {
+          body += chunk.toString();
+        });
+        req.on('end',() => {
+          var post = qs.parse(body);
+          console.log(post);
+  
+          // "INSERT into admin(UserID,Password)Values(?,?)";
+          var email =post['email'];
+          var query = "DELETE from applicants WHERE email=?";
+          var values = [ email];
+          console.log(query);
+      
+          var con = mysql.createConnection({
+            host: "localhost",
+            user: "root",
+            password: "Gauri@1029",
+            database: "application_form",
+            port: 3306,
+          });
+  
+          con.connect(function (err) {
+            if (err) {
+              console.log("err in connectivity");
+             return;
+            }
+            else{
+  
+              con.query(query , values , function(error , result){
+                if(error){
+                  console.log("error in query")
+                }
+                else {
+                  console.log("query excecute");
+                  console.log(result);
+                  console.log(result.length);
+                  if(result.length == 1){
+                    fs.readFile("home.html" , function(err ,data){
+                      if(err){
+                        return console.log(err);
+                      } 
+                      res.write(data.toString());
+                      res.end();
+                    });
+                  }
+                  else{
+                        res.write("username password is invalid , Try again");
+                        res.end();
+                  } 
+                }
+              });
+            }
+          });
+      
+        });
       }
-      res.write(data.toString());
-      res.end();
-    });
-  } else if (req.url == "/delete") {
-    console.log("delete page");
-    fs.readFile("delete.html", function (err, data) {
-      if (err) {
-        return console.error(err);
-      }
-      console.log("Page read successful for login.html ");
-      res.write(data.toString());
-      res.end();
-    });
-  } else {
+  //css page for register
+ else if (req.url == "/register.css") {
+  fs.readFile("register.css", function (err, data) {
+    if (err) {
+      return console.error(err);
+    }
+    res.write(data.toString());
+    res.end();
+  });}    
+ 
+  
+  else {
     console.log("else part");
     console.log("    " + req.url);
   
