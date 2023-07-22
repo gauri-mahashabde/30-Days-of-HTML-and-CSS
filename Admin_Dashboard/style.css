@@ -51,3 +51,38 @@ h2 {
   color: #f05462;
 }
 
+.container{
+  position:absolute;
+  right: 0;
+  width: 80vw;
+  height: 100vh; 
+  background: #f1f1f1; 
+}
+.container .header{
+position: fixed;
+top: 0;
+right: 0;
+width: 80vw;
+height: 10vh;
+background: white;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2);
+}
+
+.container .header .nav{
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.container .header .nav .search{
+  flex: 3;
+  background: green;
+}
+
+.container .header .nav .user{
+  flex: 1;
+  background: hotpink;
+}
