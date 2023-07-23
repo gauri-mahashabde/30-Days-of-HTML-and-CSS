@@ -82,7 +82,15 @@ box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2);
   background: green;
 }
 
+.container .header .nav .search input{
+  border: none;
+  background: #f1f1f1;
+  padding: 10px;
+  width: 5%;
+}
+
 .container .header .nav .user{
   flex: 1;
   background: hotpink;
 }
+
